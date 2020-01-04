@@ -1,0 +1,3 @@
+[submodule "src/datasets"]
+	path = src/datasets
+	url = https://github.com/tensorflow/datasets.git
