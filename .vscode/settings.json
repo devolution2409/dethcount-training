@@ -1,0 +1,16 @@
+{
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": true,
+  "python.linting.pycodestyleEnabled": true,
+  "python.linting.pylintPath": "/usr/bin/pylint",
+  "python.formatting.autopep8Path": "/home/devolution/.local/lib/python2.7/site-packages/autopep8.py",
+  "python.formatting.provider": "autopep8",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    /** Pyformat use it's own code action to prevent confliction with other tools. */
+    "source.organizeImports.pyformat": true
+  },
+  "files.watcherExclude": {
+    "**/datasets": true
+  }
+}
