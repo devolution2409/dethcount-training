@@ -1,4 +1,7 @@
 # dethcount-training
 TODO
-[ ] add git cloning of https://github.com/tensorflow/datasets
-[ ] 
+[x] ~~add git cloning of https://github.com/tensorflow/datasets~~ added as a submodule
+
+Useful stuff
+ * https://www.tensorflow.org/tutorials/customization/custom_training_walkthrough
+ * https://github.com/tensorflow/datasets/blob/master/tensorflow_datasets/image/image_folder.py
