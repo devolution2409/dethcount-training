@@ -2,6 +2,7 @@
 import os
 
 import numpy as np
+import tensorflow as tf
 from tensorflow.keras.layers import Conv2D, Dense, Dropout, Flatten, MaxPooling2D
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
@@ -9,9 +10,9 @@ from tensorflow.keras.preprocessing.image import ImageDataGenerator
 # create a data generator
 datagen = ImageDataGenerator()
 # load and iterate training dataset
-#train_it = datagen.flow_from_directory('/source/custom_datasets/dark_souls/train/',target_size=(1280,720), class_mode='binary', batch_size=64)
-IMG_HEIGHT = 720
-IMG_WIDTH = 1280
+
+IMG_HEIGHT = 720//2
+IMG_WIDTH = 1280//2
 EPOCHS = 16
 BATCH_SIZE = 32
 train_image_generator = ImageDataGenerator(rescale=1./255)
@@ -52,3 +53,6 @@ history = model.fit_generator(
     steps_per_epoch= total_number / BATCH_SIZE,
     epochs=EPOCHS,
 )
+
+#save the model
+tf.saved_model.save(model, "/source/model/dark_souls_remastered/1")
