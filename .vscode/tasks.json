@@ -34,7 +34,7 @@
             "label": "Run Bash on Docker Image",
             "type": "shell",
             "promptOnClose": true,
-            "command": "docker run -it --rm --memory=4G -v ${workspaceFolder}/src/:/source/ deathcount-training:latest",
+            "command": "docker run -it --rm --memory=8G -v ${workspaceFolder}/src/:/source/ deathcount-training:latest",
             "group": "test",
             "presentation": {
                 "reveal": "always",
